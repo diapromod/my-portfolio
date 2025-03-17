@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@font-face {
+  font-family:Bayon ;
+  src: url("/src/assets/Bayon-Regular.ttf");
+}
+@import "tailwindcss";
+
+@theme{
+  --font-bayon: Bayon, "sans-serif";
+  --font-jost: Jost, "sans-serif";
+}
