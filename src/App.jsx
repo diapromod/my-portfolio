@@ -3,16 +3,20 @@ import CaseStudy from "./components/CaseStudy";
 
 function App() {
   const projects = [
-    { image: "./auth-ui.png", title: "Streamlined User Authentication & Checkout UI" },
-    { image: "./eco-flask.png", title: "Dai - Eco-Friendly Hydration Flask Web UI and Branding" },
-    { image: "./decode-sports.png", title: "Branding and UI/Graphic Design for Decode Sports" },
-    { image: "./coffee-menu.png", title: "Dai Coffee - Landing and Menu Page" },
-    { image: "./schoolwiki.png", title: "SchoolWiki Redesign" },
-    { image: "./airpods.png", title: "Apple AirPods Landing Page" },
+    { id: "auth-ui", image: "./auth-ui.png", title: "Streamlined User Authentication & Checkout UI" },
+    { id: "eco-flask", image: "./eco-flask.png", title: "Dai - Eco-Friendly Hydration Flask Web UI and Branding" },
+    { id: "decode-sports", image: "./decode-sports.png", title: "Branding and UI/Graphic Design for Decode Sports" },
+    { id: "coffee-menu", image: "./coffee-menu.png", title: "Dai Coffee - Landing and Menu Page" },
+    { id: "schoolwiki", image: "./schoolwiki.png", title: "SchoolWiki Redesign" },
+    { id: "airpods", image: "./airpods.png", title: "Apple AirPods Landing Page" },
   ];
 
   const [selectedProject, setSelectedProject] = useState(projects[0].title);
-
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+  
   return (
     <div className="bg-[#1e1e1e] text-[#E8E8E2] min-h-screen">
       {/* Header Section */}
@@ -163,6 +167,7 @@ function App() {
               key={index}
               className="relative group cursor-pointer"
               onMouseEnter={() => setSelectedProject(project.title)}
+              onClick={(e) => handleSmoothScroll(e, project.id)}
             >
               <img
                 src={project.image}
@@ -178,7 +183,7 @@ function App() {
 
       {/* Case Study Section */}
       <section>
-      <div>
+      <div id="auth-ui">
         <CaseStudy
           title="Streamlined User Authentication & Checkout UI"
           bgColor="bg-[#E8E8E2]"
@@ -196,7 +201,7 @@ function App() {
           image="./login-ui.png"
         />
       </div>
-      <div>
+      <div id="eco-flask">
         <CaseStudy
           title="Dai-Eco-Friendly Hydration Flask Web UI and Branding"
           bgColor="bg-[#1e1e1e]"
@@ -216,7 +221,7 @@ function App() {
           image="./dai-ui.png"
         />
       </div>
-      <div>
+      <div id="decode-sports">
         <CaseStudy
           title="Branding and UI/Graphic Design for Decode Sports"
           bgColor="bg-[#1e1e1e]"
@@ -235,7 +240,7 @@ function App() {
           image="./decode-ui.png"
         />
       </div>
-      <div>
+      <div id="coffee-menu">
         <CaseStudy
           title=" Dai Coffee - Landing and Menu Page-Eco-Friendly Hydration Flask Web UI and Branding"
           bgColor="bg-[#E8E8E2]"
@@ -254,7 +259,7 @@ function App() {
           image="./coffee-ui.png"
         />
       </div>
-      <div>
+      <div id="schoolwiki">
         <CaseStudy
           title=" SchoolWiki Redesign "
           bgColor="bg-[#1e1e1e]"
@@ -273,7 +278,7 @@ function App() {
           image="./schoolwiki-ui.png"
         />
       </div>
-      <div>
+      <div id="airpods">
         <CaseStudy
           title="Apple AirPods Landing Page"
           bgColor="bg-[#E8E8E2]"
