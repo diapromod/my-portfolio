@@ -28,15 +28,18 @@ function App() {
       </header>
 
       {/* About Section */}
-      <section className="bg-[#E8E8E2] text-[#1e1e1e] h-screen flex items-center justify-center px-10 relative">
-        <div className="max-w-5xl grid grid-cols-2 gap-10 items-center">
+      <section className="bg-[#E8E8E2] text-[#1e1e1e] min-h-screen flex items-center justify-center px-5 md:px-10 relative">
+        <div className="max-w-5xl flex flex-col md:grid md:grid-cols-2 gap-10 items-center">
+          {/* Profile Image */}
           <img
             src="./photo.png"
             alt="Profile"
-            className="w-full max-w-sm mb-4 md:mr-6 object-cover"
+            className="w-full max-w-xs md:max-w-sm rounded-lg object-cover mb-4"
           />
-          <div>
-            <h2 className="font-bayon text-8xl font-bold">HELLO!</h2>
+
+          {/* Text Content */}
+          <div className="text-center md:text-left">
+            <h2 className="font-bayon text-6xl md:text-8xl font-bold">HELLO!</h2>
             <p className="text-[#1e1e1e] font-jost text-lg py-5">
               I’m Dia Promod, a third-year Computer Science and Engineering student at the College of Engineering Trivandrum. By day, I’m buried in algorithms, but by night, I’m all about designing slick and intuitive interfaces. I’ve been part of various college clubs’ design teams, where I’ve refined my skills in making things not only look great but also work seamlessly.
               <br />
@@ -45,9 +48,11 @@ function App() {
             </p>
           </div>
         </div>
+
         {/* Horizontal Line at Bottom of About Section */}
         <div className="absolute bottom-10 left-0 w-full border-t border-[#1e1e1e]"></div>
       </section>
+
 
       {/* Education Section */}
       <section className="bg-[#E8E8E2] font-jost h-screen text-[#1e1e1e] pb-20 px-10 relative">
