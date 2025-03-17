@@ -303,18 +303,17 @@ function App() {
       </section>
 
       {/* Thank You */}
-      <section className="bg-[#1e1e1e] text-[#E8E8E2] h-screen flex items-center justify-center px-10 relative">
-        <div className="max-w-5xl grid grid-cols-2 gap-10 items-center">
-          <h1 className="font-bayon text-8xl">Thank You!</h1>
-          <div>
-            <p className="font-jost text-lg py-5">
-            In a nutshell, my design journey has been a mix of caffeinated creativity and eco-friendly aspirations—minus the actual coffee spills and recycling of pixels. Whether it's designing a streamlined checkout flow or creating a virtual coffee shop that looks so good you might want to take a sip, I've tackled it all with a blend of enthusiasm and a touch of humor. If you're looking for someone who can turn ideas into pixels and have a few laughs along the way, let's connect, because even my designs come with a side of good vibes!            </p>
-          </div>
+      <section className="bg-[#1e1e1e] text-[#E8E8E2] py-20 px-10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left justify-center md:justify-between gap-8">
+          <h2 className="font-bayon text-6xl font-bold">THANK YOU!</h2>
+          <p className="text-lg max-w-2xl">
+            In a nutshell, my design journey has been a mix of caffeinated creativity and eco-friendly aspirations—minus the actual coffee spills and recycling of pixels. Whether it's designing a streamlined checkout flow or creating a virtual coffee shop that looks so good you might want to take a sip, I've tackled it all with a blend of enthusiasm and a touch of humor. If you're looking for someone who can turn ideas into pixels and have a few laughs along the way, let's connect, because even my designs come with a side of good vibes!
+          </p>
         </div>
+
         {/* Horizontal Line at Bottom of About Section */}
         <div className="absolute bottom-10 left-0 w-full border-t border-[#E8E8E2]"></div>
       </section>
-
 
       {/* Footer */}
       <footer className="text-center text-gray-400 py-5">
