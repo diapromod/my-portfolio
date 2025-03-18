@@ -247,7 +247,7 @@ function App() {
       </div>
       <div id="coffee-menu">
         <CaseStudy
-          title=" Dai Coffee - Landing and Menu Page-Eco-Friendly Hydration Flask Web UI and Branding"
+          title=" Dai Coffee - Landing and Menu Page"
           bgColor="bg-[#E8E8E2]"
           lineColor="border-[#1e1e1e]"
           headingColor="text-[#1e1e1e]"
